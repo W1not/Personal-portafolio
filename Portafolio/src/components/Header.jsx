@@ -47,12 +47,16 @@ function Header() {
                 </nav>
 
                 {/* Navigation button for reactive enviroment */}
-                <button class="md:hidden text-2xl"
+                <motion.button 
+                whileHover={{
+                    scale:1.2,
+                    transition: { duration: 0.1 }}}
+                class="md:hidden text-2xl"
                     onClick={() => setOpen(!open)}>
                     ☰
-                </button>
+                </motion.button>
 
-                {/* Menu for movile devices */}
+                {/* Menu for mobile devices */}
                 <AnimatePresence>
                     {open && (
                         <motion.div
@@ -63,17 +67,23 @@ function Header() {
                             transition={{ duration: 0.3 }}
                         >
                             <nav className="flex flex-col p-6 space-y-4 text-lg">
-                                <motion.a href=""
-                                    class="hover:text-bright hover:bg-[#016FB9] p-2"
+                                {/* Button to close de mobile menu */}
+                                <motion.button 
+                                    class="hover:text-bright bg-[#182825] p-2 rounded-sm"
+                                    initial={{y:-15 }}
+                                    animate={{y:1}}
                                     whileHover={{
-                                        x: 15,
+                                        scale: 1.05,
                                         transition: { duration: 0.1 }
                                     }}
                                     transition={{ duration: 0.2 }}
                                     onClick={() => setOpen(false)}
                                 >
-                                    X
-                                </motion.a>
+                                <motion.p
+                                initial={{rotate:359}}
+                                animate={{rotate:0}}
+                                >X</motion.p>
+                                </motion.button>
                                 <motion.a href="#"
                                     class="hover:text-bright hover:bg-[#016FB9] p-2"
                                     whileHover={{
