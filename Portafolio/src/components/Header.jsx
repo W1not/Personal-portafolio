@@ -1,13 +1,18 @@
 import { motion, AnimatePresence } from "motion/react"
+import { Link } from "react-router-dom";
 import { useState } from "react"
 
+
+
+
 function Header() {
+    const motionlink = motion.create(Link);
     const [open, setOpen] = useState(false);
     const [language, setLenguage] = useState("ES")
     return (
         <>
             {/* Main container */}
-            <div  class='fixed top-0 left-0 w-full z-50'>
+            <div class='fixed top-0 left-0 w-full z-50'>
                 <div class="max-w-7x1 mx-auto px-4 py-3 flex items-center justify-between text-white">
                     {/* Left items */}
                     <div class='flex items-center gap-10' >
@@ -34,8 +39,9 @@ function Header() {
 
                     {/* Navigation buttons for desktop view, disable when the movile device will be activated*/}
                     <nav class="hidden md:flex space-x-10">
-                        <motion.a href="#"
-                            class="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm"
+                        <motion.MotionLink
+                            to="/"
+                            className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm"
                             whileHover={{
                                 scale: 1.1,
                                 transition: { duration: 0.1 }
@@ -43,9 +49,9 @@ function Header() {
                             transition={{ duration: 0.2 }}
                         >
                             Inicio
-                        </motion.a>
+                        </motion.MotionLink>
                         <motion.a href="#"
-                            class="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm"
+                            className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm"
                             whileHover={{
                                 scale: 1.1,
                                 transition: { duration: 0.1 }
@@ -55,7 +61,7 @@ function Header() {
                             Proyectos
                         </motion.a>
                         <motion.a href="#"
-                            class="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm"
+                            className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm"
                             whileHover={{
                                 scale: 1.1,
                                 transition: { duration: 0.1 }
@@ -72,7 +78,7 @@ function Header() {
                             scale: 1.2,
                             transition: { duration: 0.1 }
                         }}
-                        class="md:hidden text-2xl"
+                        className="md:hidden text-2xl"
                         onClick={() => setOpen(!open)}>
                         ☰
                     </motion.button>
@@ -81,7 +87,7 @@ function Header() {
                     <AnimatePresence>
                         {open && (
                             <motion.div
-                                class="fixed inset-0 md:hidden bg-[#016FB9]"
+                                className="fixed inset-0 md:hidden bg-[#016FB9]"
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ height: "auto", opacity: 1 }}
                                 exit={{ height: 0, opacity: 0 }}
@@ -90,7 +96,7 @@ function Header() {
                                 <nav className="flex flex-col p-6 space-y-4 text-lg">
                                     {/* Button to close de mobile menu */}
                                     <motion.button
-                                        class="hover:text-bright bg-[#182825] p-2 rounded-sm"
+                                        className="hover:text-bright bg-[#182825] p-2 rounded-sm"
                                         initial={{ y: -15 }}
                                         animate={{ y: 1 }}
                                         whileHover={{
@@ -108,9 +114,9 @@ function Header() {
 
                                     {/* Language changer */}
                                     {/* Button to change the language to Spanish */}
-                                    <div class="flex items-center justify-between gap-3">
+                                    <div className="flex items-center justify-between gap-3">
                                         <motion.button
-                                            class="hover:text-bright bg-[#182825] p-2 rounded-sm w-80"
+                                            className="hover:text-bright bg-[#182825] p-2 rounded-sm w-80"
                                             initial={{ y: -15 }}
                                             animate={{ y: 1 }}
                                             whileHover={{
@@ -127,7 +133,7 @@ function Header() {
                                         </motion.button>
                                         {/* Button to change the language to English */}
                                         <motion.button
-                                            class="hover:text-bright bg-[#182825] p-2 rounded-sm w-80"
+                                            className="hover:text-bright bg-[#182825] p-2 rounded-sm w-80"
                                             initial={{ y: -15 }}
                                             animate={{ y: 1 }}
                                             whileHover={{
@@ -148,7 +154,7 @@ function Header() {
 
                                     {/* Navigation buttons */}
                                     <motion.a href="#"
-                                        class="hover:text-bright hover:bg-[#016FB9] p-2"
+                                        className="hover:text-bright hover:bg-[#016FB9] p-2"
                                         whileHover={{
                                             x: 15,
                                             transition: { duration: 0.1 }
@@ -159,7 +165,7 @@ function Header() {
                                         Inicio
                                     </motion.a>
                                     <motion.a href="#"
-                                        class="hover:text-bright hover:bg-[#016FB9] p-2"
+                                        className="hover:text-bright hover:bg-[#016FB9] p-2"
                                         whileHover={{
                                             x: 15,
                                             transition: { duration: 0.1 }
@@ -170,7 +176,7 @@ function Header() {
                                         Proyectos
                                     </motion.a>
                                     <motion.a href="#"
-                                        class="hover:text-bright hover:bg-[#016FB9] p-2"
+                                        className="hover:text-bright hover:bg-[#016FB9] p-2"
                                         whileHover={{
                                             x: 15,
                                             transition: { duration: 0.1 }
