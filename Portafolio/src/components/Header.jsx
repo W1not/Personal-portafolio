@@ -6,7 +6,7 @@ import { useState } from "react"
 
 
 function Header() {
-    const motionlink = motion.create(Link);
+    const MotionLink = motion.create(Link);
     const [open, setOpen] = useState(false);
     const [language, setLenguage] = useState("ES")
     return (
@@ -39,9 +39,9 @@ function Header() {
 
                     {/* Navigation buttons for desktop view, disable when the movile device will be activated*/}
                     <nav class="hidden md:flex space-x-10">
-                        <motion.MotionLink
+                        <MotionLink
                             to="/"
-                            className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm"
+                            className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
                             whileHover={{
                                 scale: 1.1,
                                 transition: { duration: 0.1 }
@@ -49,19 +49,25 @@ function Header() {
                             transition={{ duration: 0.2 }}
                         >
                             Inicio
-                        </motion.MotionLink>
-                        <motion.a href="#"
-                            className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm"
+                        </MotionLink>
+                        <MotionLink
+                            to="/projects"
+                            className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
                             whileHover={{
                                 scale: 1.1,
+                                transition: { duration: 0.1 }
+                            }}
+                            whileClick={{
+                                scale: 0.95,
                                 transition: { duration: 0.1 }
                             }}
                             transition={{ duration: 0.2 }}
                         >
                             Proyectos
-                        </motion.a>
-                        <motion.a href="#"
-                            className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm"
+                        </MotionLink>
+                        <MotionLink
+                            to="/"
+                            className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
                             whileHover={{
                                 scale: 1.1,
                                 transition: { duration: 0.1 }
@@ -69,7 +75,8 @@ function Header() {
                             transition={{ duration: 0.2 }}
                         >
                             Contacto
-                        </motion.a>
+                        </MotionLink>
+                        
                     </nav>
 
                     {/* Navigation button for reactive enviroment */}
