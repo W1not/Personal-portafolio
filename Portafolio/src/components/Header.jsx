@@ -1,14 +1,26 @@
 import { motion, AnimatePresence } from "motion/react"
 import { Link } from "react-router-dom";
 import { useState } from "react"
+import { useTranslation } from 'react-i18next';
 
-
+const MotionLink = motion.create(Link);
 
 
 function Header() {
-    const MotionLink = motion.create(Link);
+
     const [open, setOpen] = useState(false);
-    const [language, setLenguage] = useState("ES")
+
+    const { t, i18n } = useTranslation('header');
+
+    const currentLang = i18n.language.toUpperCase();
+    const toggleLanguage = () => {
+        const newLang = i18n.language === "es" ? "en" : "es";
+        i18n.changeLanguage(newLang);
+    };
+
+    
+    
+
     return (
         <>
             {/* Main container */}
@@ -27,11 +39,9 @@ function Header() {
                                 transition: { duration: 0.1 }
                             }}
                             transition={{ duration: 0.2 }}
-                            onClick={() =>
-                                setLenguage(prev => (prev === "ES" ? "EN" : "ES"))
-                            }
+                            onClick={toggleLanguage}          
                         >
-                            🌍 {language}
+                            🌍 {currentLang}
                         </motion.button>
                     </div>
 
@@ -48,7 +58,7 @@ function Header() {
                             }}
                             transition={{ duration: 0.2 }}
                         >
-                            Inicio
+                            {t('home')}
                         </MotionLink>
                         <MotionLink
                             to="/projects"
@@ -63,7 +73,7 @@ function Header() {
                             }}
                             transition={{ duration: 0.2 }}
                         >
-                            Proyectos
+                            {t('projects')}
                         </MotionLink>
                         <MotionLink
                             to="/"
@@ -74,9 +84,9 @@ function Header() {
                             }}
                             transition={{ duration: 0.2 }}
                         >
-                            Contacto
+                            {t('contact')}
                         </MotionLink>
-                        
+
                     </nav>
 
                     {/* Navigation button for reactive enviroment */}
@@ -160,7 +170,8 @@ function Header() {
                                     <hr class='size-1 w-full' ></hr>
 
                                     {/* Navigation buttons */}
-                                    <motion.a href="#"
+                                    <MotionLink
+                                        to="/"
                                         className="hover:text-bright hover:bg-[#016FB9] p-2"
                                         whileHover={{
                                             x: 15,
@@ -169,9 +180,10 @@ function Header() {
                                         transition={{ duration: 0.2 }}
                                         onClick={() => setOpen(false)}
                                     >
-                                        Inicio
-                                    </motion.a>
-                                    <motion.a href="#"
+                                        {t('home')}
+                                    </MotionLink>
+                                    <MotionLink
+                                        to="/projects"
                                         className="hover:text-bright hover:bg-[#016FB9] p-2"
                                         whileHover={{
                                             x: 15,
@@ -180,9 +192,10 @@ function Header() {
                                         transition={{ duration: 0.2 }}
                                         onClick={() => setOpen(false)}
                                     >
-                                        Proyectos
-                                    </motion.a>
-                                    <motion.a href="#"
+                                        {t('projects')}
+                                    </MotionLink>
+                                    <MotionLink
+                                        to="/"
                                         className="hover:text-bright hover:bg-[#016FB9] p-2"
                                         whileHover={{
                                             x: 15,
@@ -191,8 +204,8 @@ function Header() {
                                         transition={{ duration: 0.2 }}
                                         onClick={() => setOpen(false)}
                                     >
-                                        Contacto
-                                    </motion.a>
+                                        {t('contact')}
+                                    </MotionLink>
                                 </nav>
                             </motion.div>
                         )}
