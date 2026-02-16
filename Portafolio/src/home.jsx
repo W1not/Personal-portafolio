@@ -1,7 +1,14 @@
 import ColorBends from './components/ColorBends';
 import SplitText from './components/SplitText';
 
+import { useTranslation } from 'react-i18next';
+
+
 function Home() {
+
+  const { t, i18n } = useTranslation('home');
+
+
   const handleAnimationComplete = () => {
     console.log('All letters have animated!');
   };
@@ -26,7 +33,7 @@ function Home() {
           showCallback
         />
         <SplitText
-          text="Creating ideas!"
+          text={t('idea')}
           className="text-2xl font-semibold text-amber-50 [-webkit-text-stroke:0.2px_black]"
           delay={50}
           duration={1.25}

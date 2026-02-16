@@ -11,7 +11,7 @@ i18n
         fallbackLng: 'en',
         supportedLngs: ['en', 'es'],
 
-        ns: ['header'],
+        ns: ['header','home'],
         defaultNS: 'header',
 
         debug: true,

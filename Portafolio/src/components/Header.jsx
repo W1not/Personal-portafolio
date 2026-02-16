@@ -13,13 +13,12 @@ function Header() {
     const { t, i18n } = useTranslation('header');
 
     const currentLang = i18n.language.toUpperCase();
+    
+    // Toggle between Spanish and English
     const toggleLanguage = () => {
         const newLang = i18n.language === "es" ? "en" : "es";
         i18n.changeLanguage(newLang);
     };
-
-    
-    
 
     return (
         <>
@@ -59,6 +58,17 @@ function Header() {
                             transition={{ duration: 0.2 }}
                         >
                             {t('home')}
+                        </MotionLink>
+                        <MotionLink
+                            to="/about"
+                            className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
+                            whileHover={{
+                                scale: 1.1,
+                                transition: { duration: 0.1 }
+                            }}
+                            transition={{ duration: 0.2 }}
+                        >
+                            {t('aboutme')}
                         </MotionLink>
                         <MotionLink
                             to="/projects"
