@@ -48,8 +48,8 @@ function Header() {
 
                     {/* Navigation buttons for desktop view, disable when the movile device will be activated*/}
                     <nav class="hidden md:flex space-x-10">
-                        <MotionLink
-                            to="/"
+                        <motion.a
+                            href=""
                             className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
                             whileHover={{
                                 scale: 1.1,
@@ -58,9 +58,9 @@ function Header() {
                             transition={{ duration: 0.2 }}
                         >
                             {t('home')}
-                        </MotionLink>
-                        <MotionLink
-                            to="/about"
+                        </motion.a>
+                        <motion.a
+                            href="#Aboutme"
                             className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
                             whileHover={{
                                 scale: 1.1,
@@ -69,9 +69,9 @@ function Header() {
                             transition={{ duration: 0.2 }}
                         >
                             {t('aboutme')}
-                        </MotionLink>
-                        <MotionLink
-                            to="/projects"
+                        </motion.a>
+                        <motion.a
+                            href=""
                             className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
                             whileHover={{
                                 scale: 1.1,
@@ -84,9 +84,9 @@ function Header() {
                             transition={{ duration: 0.2 }}
                         >
                             {t('projects')}
-                        </MotionLink>
-                        <MotionLink
-                            to="/"
+                        </motion.a>
+                        <motion.a
+                            href=""
                             className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
                             whileHover={{
                                 scale: 1.1,
@@ -95,7 +95,7 @@ function Header() {
                             transition={{ duration: 0.2 }}
                         >
                             {t('contact')}
-                        </MotionLink>
+                        </motion.a>
 
                     </nav>
 
@@ -180,8 +180,8 @@ function Header() {
                                     <hr class='size-1 w-full' ></hr>
 
                                     {/* Navigation buttons */}
-                                    <MotionLink
-                                        to="/"
+                                    <motion.a
+                                        href=""
                                         className="hover:text-bright hover:bg-[#016FB9] p-2"
                                         whileHover={{
                                             x: 15,
@@ -191,9 +191,9 @@ function Header() {
                                         onClick={() => setOpen(false)}
                                     >
                                         {t('home')}
-                                    </MotionLink>
-                                    <MotionLink
-                                        to="/projects"
+                                    </motion.a>
+                                    <motion.a
+                                        href=""
                                         className="hover:text-bright hover:bg-[#016FB9] p-2"
                                         whileHover={{
                                             x: 15,
@@ -203,9 +203,9 @@ function Header() {
                                         onClick={() => setOpen(false)}
                                     >
                                         {t('projects')}
-                                    </MotionLink>
-                                    <MotionLink
-                                        to="/"
+                                    </motion.a>
+                                    <motion.a
+                                        href=""
                                         className="hover:text-bright hover:bg-[#016FB9] p-2"
                                         whileHover={{
                                             x: 15,
@@ -215,7 +215,7 @@ function Header() {
                                         onClick={() => setOpen(false)}
                                     >
                                         {t('contact')}
-                                    </MotionLink>
+                                    </motion.a>
                                 </nav>
                             </motion.div>
                         )}
