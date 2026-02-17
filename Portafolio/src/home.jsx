@@ -21,7 +21,7 @@ function Home() {
         <div class="flex flex-col items-center justify-center h-screen text-center">
           <SplitText
             text="Raul Rodriguez R."
-            className="text-9xl font-bold text-amber-50 [-webkit-text-stroke:1px_black] pb-5"
+            className="text-4xl md:text-7xl lg:text-9xl font-bold text-amber-50 [-webkit-text-stroke:1px_black] pb-5"
             delay={50}
             duration={1.25}
             ease="power3.out"
@@ -70,7 +70,7 @@ function Home() {
         </div>
       </div>
 
-      <section id='Aboutme' className=''>
+      <section id='Aboutme' className='py-95'>
         <AboutMe/>
       </section>
 

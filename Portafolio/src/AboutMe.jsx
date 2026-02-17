@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
-
+import ItemBox from "./components/ItemBox.jsx"
 function AboutMe() {
     const {t, i18n} = useTranslation('');
+
     return (
         <>
-            <div className="m-40 text-amber-50">
-                <h1 className="text-4xl">About Me</h1>
+            <div className="max-2-5x1 mx-auto px-20 md:px-25 lg:px-60 text-amber-50">
+                <h1 className="text-4xl">{t('aboutme')}</h1>
                 <div className="flex flex-col md:flex-row items-center gap-8">
                     <div className="flex-2">
                         <p>
@@ -16,6 +17,12 @@ function AboutMe() {
                         <p>1</p>
                     </div>
                 </div>
+            </div>
+
+            <div className="py-30 max-2-5x1 mx-auto px-20 md:px-25 lg:px-60 text-amber-50">
+                <h1 className="text-4xl">Skills</h1>
+                <ItemBox
+                text='Hola'/>
             </div>
         </>
 

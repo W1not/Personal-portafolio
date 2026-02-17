@@ -13,7 +13,7 @@ function Header() {
     const { t, i18n } = useTranslation('header');
 
     const currentLang = i18n.language.toUpperCase();
-    
+
     // Toggle between Spanish and English
     const toggleLanguage = () => {
         const newLang = i18n.language === "es" ? "en" : "es";
@@ -37,8 +37,12 @@ function Header() {
                                 scale: 1.05,
                                 transition: { duration: 0.1 }
                             }}
+                            whileTap={{
+                                scale: 0.9,
+                                transition: { duration: 0.1 }
+                            }}
                             transition={{ duration: 0.2 }}
-                            onClick={toggleLanguage}          
+                            onClick={toggleLanguage}
                         >
                             🌍 {currentLang}
                         </motion.button>
@@ -105,6 +109,10 @@ function Header() {
                             scale: 1.2,
                             transition: { duration: 0.1 }
                         }}
+                        whileTap={{
+                            scale: 0.9,
+                            transition: { duration: 0.1 }
+                        }}
                         className="md:hidden text-2xl"
                         onClick={() => setOpen(!open)}>
                         ☰
@@ -121,61 +129,54 @@ function Header() {
                                 transition={{ duration: 0.3 }}
                             >
                                 <nav className="flex flex-col p-6 space-y-4 text-lg">
-                                    {/* Button to close de mobile menu */}
-                                    <motion.button
-                                        className="hover:text-bright bg-[#182825] p-2 rounded-sm"
-                                        initial={{ y: -15 }}
-                                        animate={{ y: 1 }}
-                                        whileHover={{
-                                            scale: 1.05,
-                                            transition: { duration: 0.1 }
-                                        }}
-                                        transition={{ duration: 0.2 }}
-                                        onClick={() => setOpen(false)}
-                                    >
-                                        <motion.p
-                                            initial={{ rotate: 359 }}
-                                            animate={{ rotate: 0 }}
-                                        >X</motion.p>
-                                    </motion.button>
+                                    {/* Main container to buttons on the top */}
+                                    <div className="flex items-center w-full gap-3">
 
-                                    {/* Language changer */}
-                                    {/* Button to change the language to Spanish */}
-                                    <div className="flex items-center justify-between gap-3">
+                                        {/* Language changer */}
+                                        {/* Button to change the language to Spanish */}
+                                        <div className="flex items-center justify-between gap-3">
+                                            <motion.button
+                                                className=" bg-[#182825] flex-3 hover:text-bright p-2 rounded-sm"
+                                                initial={{ y: -15 }}
+                                                animate={{ y: 1 }}
+                                                whileHover={{
+                                                    scale: 1.04,
+                                                    transition: { duration: 0.1 }
+                                                }}
+                                                whileTap={{
+                                                    scale: 0.9,
+                                                    transition: { duration: 0.1 }
+                                                }}
+                                                transition={{ duration: 0.2 }}
+                                                onClick={toggleLanguage}
+                                            >
+                                                <motion.p>
+                                                    🌍 {currentLang}
+                                                </motion.p>
+                                            </motion.button>
+                                        </div>
+                                        {/* Button to close de mobile menu */}
                                         <motion.button
-                                            className="hover:text-bright bg-[#182825] p-2 rounded-sm w-80"
+                                            className="bg-[#182825] flex-7 p-2 rounded-sm hover:text-bright"
                                             initial={{ y: -15 }}
                                             animate={{ y: 1 }}
                                             whileHover={{
-                                                scale: 1.05,
+                                                scale: 1.04,
+                                                transition: { duration: 0.1 }
+                                            }}
+                                            whileTap={{
+                                                scale: 0.9,
                                                 transition: { duration: 0.1 }
                                             }}
                                             transition={{ duration: 0.2 }}
                                             onClick={() => setOpen(false)}
                                         >
-                                            <motion.p
-                                                initial={{ rotate: 359 }}
-                                                animate={{ rotate: 0 }}
-                                            >ES</motion.p>
+                                            <p>X</p>
                                         </motion.button>
-                                        {/* Button to change the language to English */}
-                                        <motion.button
-                                            className="hover:text-bright bg-[#182825] p-2 rounded-sm w-80"
-                                            initial={{ y: -15 }}
-                                            animate={{ y: 1 }}
-                                            whileHover={{
-                                                scale: 1.05,
-                                                transition: { duration: 0.1 }
-                                            }}
-                                            transition={{ duration: 0.2 }}
-                                            onClick={() => setOpen(false)}
-                                        >
-                                            <motion.p
-                                                initial={{ rotate: 359 }}
-                                                animate={{ rotate: 0 }}
-                                            >EN</motion.p>
-                                        </motion.button>
+
+
                                     </div>
+
 
                                     <hr class='size-1 w-full' ></hr>
 
