@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
 import ItemBox from "./components/ItemBox.jsx"
+
+import { skills } from "./data/skills.js";
 function AboutMe() {
-    const {t, i18n} = useTranslation('');
+    const { t, i18n } = useTranslation('');
 
     return (
         <>
@@ -21,8 +23,18 @@ function AboutMe() {
 
             <div className="py-30 max-2-5x1 mx-auto px-20 md:px-25 lg:px-60 text-amber-50">
                 <h1 className="text-4xl">Skills</h1>
-                <ItemBox
-                text='Hola'/>
+                <div className="flex flex-col md:flex-row items-center gap-5 py-5">
+                    {skills.map((skill) =>
+                    (
+                        <ItemBox
+                        key={skill.title}
+                        title={skill.title}
+                        image={skill.image}
+                        />
+                    ))}
+
+                </div>
+
             </div>
         </>
 
