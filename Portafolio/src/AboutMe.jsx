@@ -23,7 +23,7 @@ function AboutMe() {
 
             <div className="py-30 max-2-5x1 mx-auto px-20 md:px-25 lg:px-60 text-amber-50">
                 <h1 className="text-4xl">Skills</h1>
-                <div className="flex flex-col md:flex-row items-center gap-5 py-5">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 items-center gap-5 py-5">
                     {skills.map((skill) =>
                     (
                         <ItemBox

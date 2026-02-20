@@ -74,7 +74,7 @@ function Home() {
         <AboutMe/>
       </section>
 
-      <section id='Projects' className=''>
+      <section id='Projects'>
         <Project/>
       </section>
       

@@ -23,7 +23,7 @@ function Header() {
     return (
         <>
             {/* Main container */}
-            <div class='fixed top-0 left-0 w-full z-50'>
+            <div class='fixed top-0 left-0 w-full z-50 '>
                 <div class="max-w-7x1 mx-auto px-4 py-3 flex items-center justify-between text-white">
                     {/* Left items */}
                     <div class='flex items-center gap-10' >
@@ -176,6 +176,7 @@ function Header() {
 
 
                                     </div>
+                                    
 
 
                                     <hr class='size-1 w-full' ></hr>
