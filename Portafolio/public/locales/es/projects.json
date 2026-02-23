@@ -1,0 +1,12 @@
+{
+    "projects": {
+        "pomodoro": {
+            "title": "Temporizador Pomodoro",
+            "description": "Un temporizador Pomodoro simple construido con React..."
+        },
+        "contractSystem": {
+            "title": "Sistema de Contratos",
+            "description": "Un sistema de gestión de contratos..."
+        }
+    }
+}

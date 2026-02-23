@@ -5,13 +5,12 @@ import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 
 
-
 function App() {
   return (
     <>
       <Header />
-      <main className="content pt-20">
-        <Home/>
+      <main className="content pt-20 ">
+        <Home />
       </main>
       <Footer />
     </>
