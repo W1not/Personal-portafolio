@@ -4,6 +4,10 @@ export const skills = [
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
   },
   {
+    title: "Google Cloud",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
+  },
+  {
     title: "Python",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
   },
@@ -26,5 +30,22 @@ export const skills = [
   {
     title: "C#",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+  },
+  {
+    title: "CSS",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+  },
+  {
+    title: "Tailwind CSS",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+  },
+  {
+    title: "JavaScript",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+  },
+  {
+    title: "React",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
   }
+  
 ];

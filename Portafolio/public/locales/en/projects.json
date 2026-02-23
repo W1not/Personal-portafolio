@@ -1,0 +1,12 @@
+{
+  "title": "Projects",
+  "pomodoro": {
+    "title": "Pomodoro Timer",
+    "description": "A Pomodoro Timer built with C#. It is a time-management tool that uses a timer to break work into 25-minute distraction-free intervals called “pomodoros."
+  },
+  "contractSystem": {
+    "title": "Contract System",
+    "description": "A contract management system built with C# and Microsoft SQL Server to manage the database. It helps manage employee information, job positions, and salaries to generate contracts. It includes a dashboard that displays all workers in a table, allowing users to view their basic information."
+  },
+  "btn_viewProject" : "View Project"
+}

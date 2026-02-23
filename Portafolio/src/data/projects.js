@@ -1,14 +1,14 @@
 export const projects_list = {
-    "Pomodoro Timer" : 
+    pomodoro : 
     {
-        description : "A simple Pomodoro Timer built with React. It allows users to set work and break intervals, helping them manage their time effectively.",
         technologies: ["C#" , "WPF"],
-        link: "https://github.com/W1not/Pomodoro-App"
+        link: "https://github.com/W1not/Pomodoro-App",
+        year: "2025"
     },
-    "Contract System" : 
+    contractSystem : 
     {
-        description : "A simple Pomodoro Timer built with React. It allows users to set work and break intervals, helping them manage their time effectively.",
-        technologies: ["C#" , "WPF"],
-        link: "https://github.com/W1not/Pomodoro-App"
+        technologies: ["C#" , "WPF","Microsoft SQL Server"],
+        link: "https://github.com/W1not/Contract_System_V02",
+        year: "2024-2025"
     }
 }

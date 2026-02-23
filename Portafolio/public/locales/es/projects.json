@@ -1,12 +1,13 @@
 {
-    "projects": {
-        "pomodoro": {
-            "title": "Temporizador Pomodoro",
-            "description": "Un temporizador Pomodoro simple construido con React..."
-        },
-        "contractSystem": {
-            "title": "Sistema de Contratos",
-            "description": "Un sistema de gestión de contratos..."
-        }
-    }
+  "title": "Proyectos",
+  "pomodoro": {
+    "title": "Temporizador Pomodoro",
+    "description": "Un temporizador Pomodoro desarrollado con C#. Es una herramienta de gestión del tiempo que utiliza un temporizador para dividir el trabajo en intervalos de 25 minutos sin distracciones, llamados “pomodoros"
+  },
+  "contractSystem": {
+    "title": "Sistema de Contratos",
+    "description": 
+    "Un sistema de gestión de contratos desarrollado con C# y Microsoft SQL Server para administrar la base de datos. Permite gestionar la información de los empleados, los puestos de trabajo y los salarios para generar contratos. Incluye un panel de control que muestra a todos los trabajadores en una tabla, permitiendo visualizar su información básica."
+  },
+  "btn_viewProject" : "Ver Proyecto"
 }
