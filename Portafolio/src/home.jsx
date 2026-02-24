@@ -17,8 +17,8 @@ function Home() {
 
   return (
     <>
-      <div>
-        <div class="flex flex-col items-center justify-center h-screen text-center">
+      <div id="Home">
+        <div className="flex flex-col items-center justify-center h-screen text-center">
           <SplitText
             text="Raul Rodriguez R."
             className="text-4xl md:text-7xl lg:text-9xl font-bold text-amber-50 [-webkit-text-stroke:1px_black] pb-5"
@@ -52,7 +52,7 @@ function Home() {
         </div>
 
         {/* Background */}
-        <div class='blur-lg absolute inset-0 -z-10 overflow-hidden'>
+        <div className='blur-lg absolute inset-0 -z-10 overflow-hidden'>
           <ColorBends
             colors={["#ff5c7a", "#8a5cff", "#00ffd1"]}
             rotation={0}

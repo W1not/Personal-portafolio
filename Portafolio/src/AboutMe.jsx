@@ -23,7 +23,7 @@ function AboutMe() {
             </div>
 
             <div className="py-30 max-2-5x1 mx-auto px-20 md:px-25 lg:px-60 text-amber-50">
-                <h1 className="text-4xl">Skills</h1>
+                <h1 className="text-4xl">{t('skills')}</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 items-center gap-5 py-5">
                     {skills.map((skill) =>
                     (

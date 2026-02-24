@@ -53,7 +53,7 @@ function Header() {
                     {/* Navigation buttons for desktop view, disable when the movile device will be activated*/}
                     <nav class="hidden md:flex space-x-10">
                         <motion.a
-                            href=""
+                            href="#Home"
                             className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
                             whileHover={{
                                 scale: 1.1,
@@ -75,7 +75,7 @@ function Header() {
                             {t('aboutme')}
                         </motion.a>
                         <motion.a
-                            href=""
+                            href="#Projects"
                             className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
                             whileHover={{
                                 scale: 1.1,
