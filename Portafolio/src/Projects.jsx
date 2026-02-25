@@ -8,6 +8,7 @@ function Project() {
     <>
       <div className='max-2-5x1 mx-auto px-20 md:px-25 lg:px-60  text-amber-50 m-40'>
         <h1 className="text-4xl py-2 pb-5">{t("title")}</h1>
+        <hr className='pb-5'/>
         {Object.entries(projects_list).map(([key, details]) => (
           <div className='bg-[#084569]/40 p-4 rounded-2xl border border-[#016FB9] mb-5 hover:border-[#22AED1] transition' key={key}>
             <h1 className="text-2xl pb-5">{t(`${key}.title`)}</h1>

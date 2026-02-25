@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import AboutMe from './AboutMe.jsx';
 import Project from './Projects.jsx'
 import Contact from './Contact.jsx';
-import SocialMedia from './SocialMedia.jsx';
 
 function Home() {
 
@@ -73,14 +72,13 @@ function Home() {
 
       <section id='Aboutme' className='py-95'>
         <AboutMe />
-        <SocialMedia />
       </section>
 
-      <section id='Projects'>
+      <section id='Projects' className='py-50'>
         <Project />
       </section>
 
-      <section id='Contact'>
+      <section id='Contact' className='py-95'>
         <Contact />
       </section>
 
