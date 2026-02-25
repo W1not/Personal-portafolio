@@ -4,7 +4,8 @@ import SplitText from './components/SplitText';
 import { useTranslation } from 'react-i18next';
 import AboutMe from './AboutMe.jsx';
 import Project from './Projects.jsx'
-
+import Contact from './Contact.jsx';
+import SocialMedia from './SocialMedia.jsx';
 
 function Home() {
 
@@ -71,13 +72,18 @@ function Home() {
       </div>
 
       <section id='Aboutme' className='py-95'>
-        <AboutMe/>
+        <AboutMe />
+        <SocialMedia />
       </section>
 
       <section id='Projects'>
-        <Project/>
+        <Project />
       </section>
-      
+
+      <section id='Contact'>
+        <Contact />
+      </section>
+
     </>
   )
 }

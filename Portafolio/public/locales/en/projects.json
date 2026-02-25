@@ -8,5 +8,10 @@
     "title": "Contract System",
     "description": "A contract management system built with C# and Microsoft SQL Server to manage the database. It helps manage employee information, job positions, and salaries to generate contracts. It includes a dashboard that displays all workers in a table, allowing users to view their basic information."
   },
+  "personalPortafolio" : {
+    "title" : "Portafolio personal",
+    "description" : 
+    "A web application developed with React and Tailwind CSS, designed to showcase my professional background and projects through an ineractive interface. It features a responsive UI, controlled animations, and a modular component-based architecture to ensure scalability and maintain clean and organized code."
+  },
   "btn_viewProject" : "View Project"
 }

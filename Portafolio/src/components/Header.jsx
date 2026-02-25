@@ -24,7 +24,7 @@ function Header() {
         <>
             {/* Main container */}
             <div class='fixed top-0 left-0 w-full z-50 '>
-                <div class="max-w-7x1 mx-auto px-4 py-3 flex items-center justify-between text-white">
+                <div class="max-w-7x1 mx-auto px-4 py-3 flex items-center justify-between text-white bg-[#0E1B18]/60 ">
                     {/* Left items */}
                     <div class='flex items-center gap-10' >
                         <p class="text-xl font-bold">W1N0T</p>
@@ -90,7 +90,7 @@ function Header() {
                             {t('projects')}
                         </motion.a>
                         <motion.a
-                            href=""
+                            href="#Contact"
                             className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
                             whileHover={{
                                 scale: 1.1,
@@ -176,45 +176,81 @@ function Header() {
 
 
                                     </div>
-                                    
+
 
 
                                     <hr class='size-1 w-full' ></hr>
 
                                     {/* Navigation buttons */}
                                     <motion.a
-                                        href=""
                                         className="hover:text-bright hover:bg-[#016FB9] p-2"
                                         whileHover={{
                                             x: 15,
                                             transition: { duration: 0.1 }
                                         }}
                                         transition={{ duration: 0.2 }}
-                                        onClick={() => setOpen(false)}
+                                        onClick={() => {
+                                            setOpen(false);
+
+                                            setTimeout(() => {
+                                                const section = document.getElementById("Home");
+                                                section?.scrollIntoView({ behavior: "smooth" });
+                                            }, 100);
+                                        }}
                                     >
                                         {t('home')}
                                     </motion.a>
                                     <motion.a
-                                        href=""
                                         className="hover:text-bright hover:bg-[#016FB9] p-2"
                                         whileHover={{
                                             x: 15,
                                             transition: { duration: 0.1 }
                                         }}
                                         transition={{ duration: 0.2 }}
-                                        onClick={() => setOpen(false)}
+                                        onClick={() => {
+                                            setOpen(false);
+
+                                            setTimeout(() => {
+                                                const section = document.getElementById("Aboutme");
+                                                section?.scrollIntoView({ behavior: "smooth" });
+                                            }, 100);
+                                        }}
+                                    >
+                                        {t('aboutme')}
+                                    </motion.a>
+                                    <motion.a
+                                        className="hover:text-bright hover:bg-[#016FB9] p-2"
+                                        whileHover={{
+                                            x: 15,
+                                            transition: { duration: 0.1 }
+                                        }}
+                                        transition={{ duration: 0.2 }}
+                                        onClick={() => {
+                                            setOpen(false);
+
+                                            setTimeout(() => {
+                                                const section = document.getElementById("Projects");
+                                                section?.scrollIntoView({ behavior: "smooth" });
+                                            }, 100);
+                                        }}
                                     >
                                         {t('projects')}
                                     </motion.a>
                                     <motion.a
-                                        href=""
                                         className="hover:text-bright hover:bg-[#016FB9] p-2"
                                         whileHover={{
                                             x: 15,
                                             transition: { duration: 0.1 }
                                         }}
                                         transition={{ duration: 0.2 }}
-                                        onClick={() => setOpen(false)}
+                                        onClick={() => {
+                                            setOpen(false);
+
+                                            setTimeout(() => {
+                                                const section = document.getElementById("Contact");
+                                                section?.scrollIntoView({ behavior: "smooth" });
+                                            }, 100);
+                                        }}
                                     >
                                         {t('contact')}
                                     </motion.a>

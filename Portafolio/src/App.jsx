@@ -8,7 +8,7 @@ import Footer from './components/Footer.jsx'
 function App() {
   return (
     <>
-      <Header />
+      <Header/>
       <main className="content pt-20 ">
         <Home />
       </main>

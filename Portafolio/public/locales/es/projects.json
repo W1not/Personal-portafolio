@@ -9,5 +9,10 @@
     "description": 
     "Un sistema de gestión de contratos desarrollado con C# y Microsoft SQL Server para administrar la base de datos. Permite gestionar la información de los empleados, los puestos de trabajo y los salarios para generar contratos. Incluye un panel de control que muestra a todos los trabajadores en una tabla, permitiendo visualizar su información básica."
   },
+  "personalPortafolio" : {
+    "title" : "Portafolio personal",
+    "description" : 
+    "Aplicación web desarrollada con React y TailwindCSS, enfocada en presentar mi perfil profesional y proyectos de manera interactiva. Implementa diseño responsivo, animaciones controladas y una estructura modular basada en componentes reutilizables para mantener escalabilidad y mantenibilidad del código."
+  },
   "btn_viewProject" : "Ver Proyecto"
 }
