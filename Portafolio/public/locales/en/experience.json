@@ -1,0 +1,15 @@
+{
+    "id1" : {
+        "position" : "IT Assistant",
+        "description" : "Supervised IT operational and development processes. Administration of Google Workspace and Microsoft Admin Center. Cloud server administration and monitoring. Participated in the administration of an in-house ERP system development lifecycle. Designed, developed, and maintained WordPress websites. Full-stack software development using C# and Azure SQL Server.",
+        "monthStart" : "Oct",
+        "monthFinished" : ""
+    },
+    "id2" : {
+        "position" : "Data center operations intern",
+        "description" : "Supported physical infrastructure management in the server room. Assisted with server performance and stability testing. Performed Ethernet cabling, patching, and connectivity verification. ",
+        "monthStart" : "March",
+        "monthFinished" : "June"
+    },
+    "current" : "Actual"
+}

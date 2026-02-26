@@ -1,0 +1,15 @@
+{
+    "id1" : {
+        "position" : "Frontend Developer",
+        "description" : "Desarrollo de aplicaciones web con React",
+        "monthStart" : "Octubre",
+        "monthFinished" : ""
+    },
+    "id2" : {
+        "position" : "Backend Developer",
+        "description" : "Implementacion de APIs REST",
+        "monthStart" : "Marzo",
+        "monthFinished" : "Junio"
+    },
+    "current" : "Present"
+}

@@ -70,15 +70,15 @@ function Home() {
         </div>
       </div>
 
-      <section id='Aboutme' className='py-95'>
+      <section id='Aboutme' className='py-5'>
         <AboutMe />
       </section>
 
-      <section id='Projects' className='py-50'>
+      <section id='Projects' className='py-5'>
         <Project />
       </section>
 
-      <section id='Contact' className='py-95'>
+      <section id='Contact' className='py-5'>
         <Contact />
       </section>
 
