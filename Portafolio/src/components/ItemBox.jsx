@@ -2,7 +2,7 @@ import { motion } from "motion/react"
 
 export default function ItemBox({ title, image }) {
     return (
-        <motion.div className="w-full sm:-auto 
+        <motion.div className="w-auto sm:-auto 
         px-4 py-2 rounded-x1 
         flex flex-row items-center justify-center gap-3 
         transition

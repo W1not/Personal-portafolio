@@ -14,9 +14,9 @@ function Project() {
             <h1 className="text-2xl pb-5">{t(`${key}.title`)}</h1>
             <p className='pb-2'>{t(`${key}.description`)}</p>
             
-            <div className='flex items-center pb-4 gap-2'>
+            <div className='flex flex-wrap items-center pb-4 gap-2'>
               {details.technologies.map(tech => (
-                <p className="text-sm border p-1.5 rounded-4xl text-[#016FB9] bg-[#0E1B18]">{tech}</p>
+                <p className="text-sm border p-2 rounded-4xl text-[#016FB9] bg-[#0E1B18] whitespace-nowrap">{tech}</p>
               ))}
             </div>
             <motion.a

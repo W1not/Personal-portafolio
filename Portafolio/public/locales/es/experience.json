@@ -1,0 +1,16 @@
+{
+    "title" : "Experiencia",
+    "id1" : {
+        "position" : "Auxiliar de Tecnologias de la Información",
+        "description" : "Supervisé los procesos operativos y de desarrollo de TI. Administración de Google Workspace y Microsoft Admin Center. Administración y monitoreo de servidores en la nube. Participación en la gestión del ciclo de vida de desarrollo de un sistema ERP interno. Diseño, desarrollo y mantenimiento de sitios web en WordPress. Desarrollo de software full-stack utilizando C# y Azure SQL Server.",
+        "monthStart" : "Octubre",
+        "monthFinished" : ""
+    },
+    "id2" : {
+        "position" : "Backend Developer",
+        "description" : "Brindé soporte en la gestión de la infraestructura física en el cuarto de servidores. Asistí en las pruebas de rendimiento y estabilidad de los servidores. Realicé cableado Ethernet, conexión en paneles de parcheo y verificación de conectividad.",
+        "monthStart" : "Marzo",
+        "monthFinished" : "Junio"
+    },
+    "current" : "Present"
+}
