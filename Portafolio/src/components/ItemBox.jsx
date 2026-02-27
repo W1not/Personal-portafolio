@@ -6,7 +6,7 @@ export default function ItemBox({ title, image }) {
         px-4 py-2 rounded-x1 
         flex flex-row items-center justify-center gap-3 
         transition
-        outline-2 bg-[#084569]/40 outline-[#016FB9] outline-offset-2 rounded-3xl hover:bg-[#22AED1] hover:outline-[#22AED1]
+        outline-2 bg-[#084569]/40 outline-[#016FB9] outline-offset-2 rounded-md hover:bg-[#22AED1] hover:outline-[#22AED1]
         select-none cursor-pointer"
             whileHover={{
                     y: -8,
