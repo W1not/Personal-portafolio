@@ -20,7 +20,7 @@ function Experience() {
                         <h2 className="text-lg">{details.company}</h2>
                         
                         <p>{t(`${key}.description`)}</p>
-                        <p>{t(`${key}.monthStart`)} {details.startYear} - {t(`${key}.monthFinished`)} {details.endYear ?? t('current')}</p>
+                        <p className="text-gray-300">{t(`${key}.monthStart`)} {details.startYear} - {t(`${key}.monthFinished`)} {details.endYear ?? t('current')}</p>
                     </div>
                 </div>
             ))}
