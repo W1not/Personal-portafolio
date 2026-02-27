@@ -7,11 +7,11 @@ function Experience() {
 
     return (
         <div className="py-20 max-2-5x1 mx-auto px-20 md:px-25 lg:px-60 text-amber-50 ">
-            <h1 className="text-4xl pb-2">Experience</h1>
+            <h1 className="text-4xl pb-2">{t('title')}</h1>
             <hr />
             {Object.entries(experience_list).map(([key, details]) => (
                 <div key={key}
-                    className="grid grid-cols-1 md:grid-cols-[60px_1fr] gap-y-4 md:gap-x-8 p-6 md:p-10">
+                    className="grid grid-cols-1 md:grid-cols-[60px_1fr] gap-y-4 md:gap-x-8 p-4 md:p-10">
                     <div className="flex justify-center md:justify-start">
                         <h1 className="text-4xl justify-center">※</h1>
                     </div>

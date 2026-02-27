@@ -1,6 +1,10 @@
 {
     "title" : "Sobre mí",
+    "carrerTitle" : "Trayectoria",
     "description" : "Desarrollador con experiencia en distintos lenguajes de programacion, administracion de base de datos en Microsoft SQL Server y MySQL, conocimiento en plataformas en la nube, actualmente con mas de un año de experiencia en la creacion de soluciones y administracion de procesos en el desarrollo de sistemas de ERP.",
     "description2" : "Disfruto el desarrollo de soluciones que pueden automatizar o apoyar en el desarrollo personal de las personas y sistemas que faciliten los procesos diarios",
-    "skills" : "Habilidades"
+    "skills" : "Habilidades",
+
+    "Hobbietitle" : "Pasatiempos",
+    "hobbiesDescription" : "Disfruto crear en diversas áreas, tanto en mi trabajo profesional como en mis pasatiempos personales, como el dibujo utilizando técnicas tradicionales y digitales. También disfruto desarrollar y modificar personajes interactivos en 3D en Unity, así como explorar nuevas herramientas y lenguajes de programación."
 }
