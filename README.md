@@ -1,4 +1,4 @@
-# Personal Portafolio
+# Professional Portafolio
 
 The repository contains my professional portfolio built with React + Vite as the frontend technology.
 
