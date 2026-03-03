@@ -1,7 +1,7 @@
 export const skills = [
   {
     title: "AWS",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
   },
   {
     title: "Google Cloud",
