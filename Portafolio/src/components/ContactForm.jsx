@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 
 
 
@@ -11,6 +11,8 @@ function ContactForm() {
         e.target.style.height = "auto";
         e.target.style.height = e.target.scrollHeight + "px";
     }
+
+    const [text, setText] = useState("");
 
     const [state, handleSubmit] = useForm("xlgwajze");
     if (state.succeeded) {
@@ -59,13 +61,18 @@ function ContactForm() {
             <label htmlFor='message'>
                 {t('message')}
             </label>
+            
             <textarea required
                 id="message"
                 name="message"
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                maxLength={300}
                 rows="1"
                 onInput={handleAutoResize}
                 className='w-full border-b-2 border-gray-500 focus:border-[#22AED1] transition outline-none bg-transparent resize-none overflow-hidden'
             />
+            <p className='text-gray-50/20 text-end'>{text.length}/300</p>
             <ValidationError
                 prefix="Message"
                 field="message"
