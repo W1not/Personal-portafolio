@@ -8,9 +8,7 @@ The repository contains my professional portfolio built with React + Vite as the
 ![Vite Badge](https://img.shields.io/badge/Vite-9135FF?logo=vite&logoColor=fff&style=flat-square)
 ![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat-square)
 
-## Last updates
-+ Improved UI experience on mobile devices
-+ Added Experience information
+### [Release Notes](README.md)
 
 ## 📦Development
 Node 10.9.2
