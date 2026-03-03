@@ -2,7 +2,7 @@
 The repository contains my professional portfolio built with React + Vite as the frontend technology.
 
 ### Release Notes:
-#### 02/03/2026 
+#### 03/03/2026 
 + Added link to my social medias
 
 #### 02/03/2026 
