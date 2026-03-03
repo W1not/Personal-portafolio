@@ -3,6 +3,9 @@ The repository contains my professional portfolio built with React + Vite as the
 
 ### Release Notes:
 #### 02/03/2026 
++ Added link to my social medias
+
+#### 02/03/2026 
 + Created README.md
 + Added text limit on contact form
 
