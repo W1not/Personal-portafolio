@@ -6,7 +6,7 @@ function Experience() {
     const { t, i18n } = useTranslation('experience')
 
     return (
-        <div className="py-20 max-2-5x1 mx-auto px-20 md:px-25 lg:px-60 text-amber-50 ">
+        <div className="py-20 max-2-5x1 mx-auto px-10 md:px-25 lg:px-60 text-amber-50 ">
             <h1 className="text-4xl pb-2">{t('title')}</h1>
             <hr />
             {Object.entries(experience_list).map(([key, details]) => (

@@ -6,7 +6,7 @@ function Project() {
   const {t, i18n} = useTranslation("projects") 
   return (
     <>
-      <div className='max-2-5x1 mx-auto px-20 md:px-25 lg:px-60  text-amber-50 m-40'>
+      <div className='max-2-5x1 mx-auto px-10 md:px-25 lg:px-60  text-amber-50 m-40'>
         <h1 className="text-4xl py-2 pb-5">{t("title")}</h1>
         <hr className='pb-5'/>
         {Object.entries(projects_list).map(([key, details]) => (

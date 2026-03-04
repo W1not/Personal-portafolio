@@ -29,7 +29,7 @@ function ContactForm() {
         <form action="https://formspree.io/f/xlgwajze"
             method="POST"
             onSubmit={handleSubmit}
-            className='outline-2 bg-[#084569]/40 outline-[#016FB9] outline-offset-2 rounded-3xl  hover:outline-[#22AED1] grid gap-3 p-5'>
+            className='w-full max-w-md mx-auto outline-2 bg-[#084569]/40 outline-[#016FB9] outline-offset-2 rounded-3xl hover:outline-[#22AED1] grid gap-3 p-5 '>
             <label htmlFor='name'>
                 {t('name')}
             </label>

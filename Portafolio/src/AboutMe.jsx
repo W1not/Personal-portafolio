@@ -9,7 +9,7 @@ function AboutMe() {
 
     return (
         <>
-            <div className="max-2-5x1 mx-auto px-20 md:px-25 lg:px-60 text-amber-50">
+            <div className="max-2-5x1 mx-auto px-10 md:px-25 lg:px-60 text-amber-50">
                 <h1 className="text-4xl pb-2">{t('title')}</h1>
                 <hr className='pb-5' />
                 <div className="flex flex-col md:flex-row items-baseline gap-8">
@@ -29,7 +29,7 @@ function AboutMe() {
                 </div>
             </div>
 
-            <div className="py-20 max-2-5x1 mx-auto px-20 md:px-25 lg:px-60 text-amber-50">
+            <div className="py-20 max-2-5x1 mx-auto px-10 md:px-25 lg:px-60 text-amber-50">
                 <h1 className="text-4xl">{t('skills')}</h1>
 
                 <div className="flex flex-wrap items-centergap-5 gap-5 py-5">
