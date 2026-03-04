@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 
@@ -26,8 +27,7 @@ function ContactForm() {
         );
     }
     return (
-        <form action="https://formspree.io/f/xlgwajze"
-            method="POST"
+        <form
             onSubmit={handleSubmit}
             className='w-full max-w-md mx-auto outline-2 bg-[#084569]/40 outline-[#016FB9] outline-offset-2 rounded-3xl hover:outline-[#22AED1] grid gap-3 p-5 '>
             <label htmlFor='name'>
@@ -61,7 +61,7 @@ function ContactForm() {
             <label htmlFor='message'>
                 {t('message')}
             </label>
-            
+
             <textarea required
                 id="message"
                 name="message"
