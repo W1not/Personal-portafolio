@@ -1,268 +1,125 @@
 import { motion, AnimatePresence } from "motion/react"
-import { Link } from "react-router-dom";
 import { useState } from "react"
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next"
 
-const MotionLink = motion.create(Link);
-
+const NAV_ITEMS = ["home", "aboutme", "projects", "contact"]
+const SECTION_IDS = ["Home", "Aboutme", "Projects", "Contact"]
 
 function Header() {
+  const [open, setOpen] = useState(false)
+  const { t, i18n } = useTranslation("header")
+  const currentLang = i18n.language.toUpperCase()
 
-    const [open, setOpen] = useState(false);
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === "es" ? "en" : "es")
+  }
 
-    const { t, i18n } = useTranslation('header');
+  const scrollTo = (id) => {
+    setOpen(false)
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
+    }, 100)
+  }
 
-    const currentLang = i18n.language.toUpperCase();
+  return (
+    <header className="fixed top-0 left-0 w-full z-50 border-b border-[#0a3a5a] bg-[#050f1a]/75 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-6 h-13 flex items-center justify-between">
 
-    // Toggle between Spanish and English
-    const toggleLanguage = () => {
-        const newLang = i18n.language === "es" ? "en" : "es";
-        i18n.changeLanguage(newLang);
-    };
+        {/* Logo */}
+        <span className="font-mono text-base font-medium text-[#e8f4fa] tracking-widest">
+          W1N0<span className="text-[#22AED1]">T</span>
+        </span>
 
-    return (
-        <>
-            {/* Main container */}
-            <div class='fixed top-0 left-0 w-full z-50 '>
-                <div class="max-w-7x1 mx-auto px-4 py-3 flex items-center justify-between text-white bg-[#0E1B18]/60 ">
-                    {/* Left items */}
-                    <div class='flex items-center gap-10' >
-                        <p class="text-xl font-bold">W1N0T</p>
+        {/* Nav desktop */}
+        <nav className="hidden md:flex items-center gap-1">
+          {NAV_ITEMS.map((item, i) => (
+              <a
+                key={item}
+                href={`#${SECTION_IDS[i]}`}
+                className="text-[.8rem] font-mono text-[#8ab8cc] px-3 py-1.5 rounded-md border border-transparent
+                           hover:text-[#22AED1] hover:border-[#016FB9] hover:bg-[#084569]/35
+                           transition-all duration-150 select-none"
+              >
+                {t(item)}
+              </a>
+          ))}
+        </nav>
 
-                        {/* Language changer */}
-                        {/* Button to change the language Spanish to English */}
-                        <motion.button
-                            class="hidden md:flex hover:text-bright hover:bg-[#105174] p-2 rounded-sm"
-                            whileHover={{
-                                scale: 1.05,
-                                transition: { duration: 0.1 }
-                            }}
-                            whileTap={{
-                                scale: 0.9,
-                                transition: { duration: 0.1 }
-                            }}
-                            transition={{ duration: 0.2 }}
-                            onClick={toggleLanguage}
-                        >
-                            🌍 {currentLang}
-                        </motion.button>
-                    </div>
+        {/* Right side */}
+        <div className="flex items-center gap-2">
+          {/* Lang toggle */}
+          <motion.button
+            onClick={toggleLanguage}
+            className="hidden md:flex text-[.7rem] font-mono text-[#3a6a8a]
+                       border border-[#0a3a5a] rounded-md px-2.5 py-1
+                       hover:text-[#22AED1] hover:border-[#016FB9]
+                       transition-all duration-150"
+            whileTap={{ scale: 0.95 }}
+          >
+            🌍 {currentLang}
+          </motion.button>
 
+          {/* Hamburger */}
+          <motion.button
+            className="md:hidden text-[#8ab8cc] border border-[#0a3a5a] rounded-md px-2.5 py-1.5 text-sm"
+            onClick={() => setOpen(!open)}
+            whileTap={{ scale: 0.92 }}
+          >
+            ☰
+          </motion.button>
+        </div>
+      </div>
 
-
-                    {/* Navigation buttons for desktop view, disable when the movile device will be activated*/}
-                    <nav class="hidden md:flex space-x-10">
-                        <motion.a
-                            href="#Home"
-                            className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
-                            whileHover={{
-                                scale: 1.1,
-                                transition: { duration: 0.1 }
-                            }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            {t('home')}
-                        </motion.a>
-                        <motion.a
-                            href="#Aboutme"
-                            className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
-                            whileHover={{
-                                scale: 1.1,
-                                transition: { duration: 0.1 }
-                            }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            {t('aboutme')}
-                        </motion.a>
-                        <motion.a
-                            href="#Projects"
-                            className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
-                            whileHover={{
-                                scale: 1.1,
-                                transition: { duration: 0.1 }
-                            }}
-                            whileClick={{
-                                scale: 0.95,
-                                transition: { duration: 0.1 }
-                            }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            {t('projects')}
-                        </motion.a>
-                        <motion.a
-                            href="#Contact"
-                            className="hover:text-bright hover:bg-[#016FB9] p-2 rounded-sm select-none cursor-pointer"
-                            whileHover={{
-                                scale: 1.1,
-                                transition: { duration: 0.1 }
-                            }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            {t('contact')}
-                        </motion.a>
-
-                    </nav>
-
-                    {/* Navigation button for reactive enviroment */}
-                    <motion.button
-                        whileHover={{
-                            scale: 1.2,
-                            transition: { duration: 0.1 }
-                        }}
-                        whileTap={{
-                            scale: 0.9,
-                            transition: { duration: 0.1 }
-                        }}
-                        className="md:hidden text-2xl"
-                        onClick={() => setOpen(!open)}>
-                        ☰
-                    </motion.button>
-
-                    {/* Menu for mobile devices */}
-                    <AnimatePresence>
-                        {open && (
-                            <motion.div
-                                className="fixed inset-0 md:hidden bg-[#016FB9]"
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "auto", opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.3 }}
-                            >
-                                <nav className="flex flex-col p-6 space-y-4 text-lg">
-                                    {/* Main container to buttons on the top */}
-                                    <div className="flex items-center w-full gap-3">
-
-                                        {/* Language changer */}
-                                        {/* Button to change the language to Spanish */}
-                                        <div className="flex items-center justify-between gap-3">
-                                            <motion.button
-                                                className=" bg-[#182825] flex-3 hover:text-bright p-2 rounded-sm"
-                                                initial={{ y: -15 }}
-                                                animate={{ y: 1 }}
-                                                whileHover={{
-                                                    scale: 1.04,
-                                                    transition: { duration: 0.1 }
-                                                }}
-                                                whileTap={{
-                                                    scale: 0.9,
-                                                    transition: { duration: 0.1 }
-                                                }}
-                                                transition={{ duration: 0.2 }}
-                                                onClick={toggleLanguage}
-                                            >
-                                                <motion.p>
-                                                    🌍 {currentLang}
-                                                </motion.p>
-                                            </motion.button>
-                                        </div>
-                                        {/* Button to close de mobile menu */}
-                                        <motion.button
-                                            className="bg-[#182825] flex-7 p-2 rounded-sm hover:text-bright"
-                                            initial={{ y: -15 }}
-                                            animate={{ y: 1 }}
-                                            whileHover={{
-                                                scale: 1.04,
-                                                transition: { duration: 0.1 }
-                                            }}
-                                            whileTap={{
-                                                scale: 0.9,
-                                                transition: { duration: 0.1 }
-                                            }}
-                                            transition={{ duration: 0.2 }}
-                                            onClick={() => setOpen(false)}
-                                        >
-                                            <p>X</p>
-                                        </motion.button>
-
-
-                                    </div>
-
-
-
-                                    <hr class='size-1 w-full' ></hr>
-
-                                    {/* Navigation buttons */}
-                                    <motion.a
-                                        className="hover:text-bright hover:bg-[#016FB9] p-2"
-                                        whileHover={{
-                                            x: 15,
-                                            transition: { duration: 0.1 }
-                                        }}
-                                        transition={{ duration: 0.2 }}
-                                        onClick={() => {
-                                            setOpen(false);
-
-                                            setTimeout(() => {
-                                                const section = document.getElementById("Home");
-                                                section?.scrollIntoView({ behavior: "smooth" });
-                                            }, 100);
-                                        }}
-                                    >
-                                        {t('home')}
-                                    </motion.a>
-                                    <motion.a
-                                        className="hover:text-bright hover:bg-[#016FB9] p-2"
-                                        whileHover={{
-                                            x: 15,
-                                            transition: { duration: 0.1 }
-                                        }}
-                                        transition={{ duration: 0.2 }}
-                                        onClick={() => {
-                                            setOpen(false);
-
-                                            setTimeout(() => {
-                                                const section = document.getElementById("Aboutme");
-                                                section?.scrollIntoView({ behavior: "smooth" });
-                                            }, 100);
-                                        }}
-                                    >
-                                        {t('aboutme')}
-                                    </motion.a>
-                                    <motion.a
-                                        className="hover:text-bright hover:bg-[#016FB9] p-2"
-                                        whileHover={{
-                                            x: 15,
-                                            transition: { duration: 0.1 }
-                                        }}
-                                        transition={{ duration: 0.2 }}
-                                        onClick={() => {
-                                            setOpen(false);
-
-                                            setTimeout(() => {
-                                                const section = document.getElementById("Projects");
-                                                section?.scrollIntoView({ behavior: "smooth" });
-                                            }, 100);
-                                        }}
-                                    >
-                                        {t('projects')}
-                                    </motion.a>
-                                    <motion.a
-                                        className="hover:text-bright hover:bg-[#016FB9] p-2"
-                                        whileHover={{
-                                            x: 15,
-                                            transition: { duration: 0.1 }
-                                        }}
-                                        transition={{ duration: 0.2 }}
-                                        onClick={() => {
-                                            setOpen(false);
-
-                                            setTimeout(() => {
-                                                const section = document.getElementById("Contact");
-                                                section?.scrollIntoView({ behavior: "smooth" });
-                                            }, 100);
-                                        }}
-                                    >
-                                        {t('contact')}
-                                    </motion.a>
-                                </nav>
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
-                </div>
+      {/* Mobile drawer */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="md:hidden border-t border-[#0a3a5a] bg-[#050f1a] px-6 pb-5"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+          >
+            {/* Drawer top */}
+            <div className="flex items-center justify-between py-3 border-b border-[#0a3a5a] mb-3">
+              <button
+                onClick={toggleLanguage}
+                className="text-[.7rem] font-mono text-[#3a6a8a] border border-[#0a3a5a]
+                           rounded-md px-2.5 py-1 hover:text-[#22AED1] hover:border-[#016FB9]
+                           transition-all duration-150"
+              >
+                🌍 {currentLang}
+              </button>
+              <button
+                onClick={() => setOpen(false)}
+                className="text-[.7rem] font-mono text-[#3a6a8a] border border-[#0a3a5a]
+                           rounded-md px-2.5 py-1 hover:text-[#22AED1] hover:border-[#016FB9]
+                           transition-all duration-150"
+              >
+                ✕ close
+              </button>
             </div>
 
-        </>
-    )
+            {/* Nav links */}
+            <nav className="flex flex-col gap-1">
+              {NAV_ITEMS.map((item, i) => (
+                <motion.a
+                  key={item}
+                  onClick={() => scrollTo(SECTION_IDS[i])}
+                  className="text-sm font-mono text-[#8ab8cc] px-3 py-2.5 rounded-md border border-transparent
+                             hover:text-[#22AED1] hover:border-[#016FB9] hover:bg-[#084569]/35
+                             cursor-pointer transition-all duration-150"
+                  whileHover={{ x: 6, transition: { duration: 0.1 } }}
+                >
+                  {t(item)}
+                </motion.a>
+              ))}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  )
 }
 
 export default Header
