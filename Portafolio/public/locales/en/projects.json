@@ -1,5 +1,9 @@
 {
   "title": "Projects",
+  "starlinkinvoiceManager":{
+    "title": "Starlink Invoice Manager",
+    "description": "Starlink Manager System is a Windows desktop application designed to centralize the management of multiple Starlink accounts, devices, invoices, and payment references. It supports Mexican CFDI invoice validation, document organization, reporting, deliverable generation, and automatic database backups. The application was built with C#, .NET 8, WPF, MVVM, Entity Framework Core, and SQLite using a layered architecture."
+  },
   "pomodoro": {
     "title": "Pomodoro Timer",
     "description": "A Pomodoro Timer built with C#. It is a time-management tool that uses a timer to break work into 25-minute distraction-free intervals called “pomodoros."

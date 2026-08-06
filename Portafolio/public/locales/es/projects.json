@@ -1,5 +1,10 @@
 {
   "title": "Proyectos",
+  
+  "starlinkinvoiceManager":{
+    "title": "Gestor de facturas de Starlink",
+    "description": "Starlink Manager System es una aplicación de escritorio desarrollada para centralizar la administración de múltiples cuentas Starlink, dispositivos, facturas y métodos de pago. Permite validar facturas CFDI, organizar documentos, generar reportes y entregables, así como realizar respaldos automáticos de la información. El proyecto fue construido con C#, .NET 8, WPF, MVVM, Entity Framework Core y SQLite, siguiendo una arquitectura por capas."
+  },
   "pomodoro": {
     "title": "Temporizador Pomodoro",
     "description": "Un temporizador Pomodoro desarrollado con C#. Es una herramienta de gestión del tiempo que utiliza un temporizador para dividir el trabajo en intervalos de 25 minutos sin distracciones, llamados “pomodoros"

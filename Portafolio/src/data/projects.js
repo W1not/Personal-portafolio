@@ -1,4 +1,10 @@
 export const projects_list = {
+    starlinkinvoiceManager:
+    {
+        technologies: ["C#", "WPF", "SQLite"],
+        link: "https://github.com/W1not/StarlinkManagerSystem",
+        year: "2025-2026"
+    },
     personalPortafolio:
     {
         technologies: ["React", "JavaScript", "Tailwindcss", "CSS"],
