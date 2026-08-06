@@ -1,14 +1,14 @@
 {
     "title" : "Experiencia",
     "id1" : {
-        "position" : "Auxiliar de Tecnologias de la Información",
-        "description" : "Supervisé los procesos operativos y de desarrollo de TI. Administración de Google Workspace y Microsoft Admin Center. Administración y monitoreo de servidores en la nube. Participación en la gestión del ciclo de vida de desarrollo de un sistema ERP interno. Diseño, desarrollo y mantenimiento de sitios web en WordPress. Desarrollo de software full-stack utilizando C# y Azure SQL Server.",
+        "position" : "Responsable de Tecnologias de la Información",
+        "description" : "Lideré las operaciones de TI de la organización mientras contribuía a iniciativas de desarrollo de software. Desarrollé y di mantenimiento a módulos del ERP interno mediante el levantamiento de requerimientos, la elaboración de documentación técnica y la implementación de mejoras al sistema. Modernicé el sitio web institucional mediante la optimización del rendimiento, el mantenimiento de complementos y la incorporación de mejoras de seguridad. Fortalecí la seguridad de las aplicaciones web implementando validación del lado del servidor, CAPTCHA y mecanismos de verificación para formularios en línea. Administré entornos de hosting, servicios en la nube, Google Workspace y Microsoft 365 para garantizar operaciones empresariales seguras y confiables.",
         "monthStart" : "Octubre",
         "monthFinished" : ""
     },
     "id2" : {
-        "position" : "Backend Developer",
-        "description" : "Brindé soporte en la gestión de la infraestructura física en el cuarto de servidores. Asistí en las pruebas de rendimiento y estabilidad de los servidores. Realicé cableado Ethernet, conexión en paneles de parcheo y verificación de conectividad.",
+        "position" : "Soporte en Operaciones de Centro de Datos",
+        "description" : "Brindé soporte a las operaciones del centro de datos mediante el mantenimiento de la infraestructura del cuarto de servidores y la verificación de la conectividad de red. Realicé pruebas de rendimiento y estabilidad en servidores, participé en la mejora de la infraestructura de red colaborando en la migración de una topología en cascada a una topología estrella y apoyé en la identificación de vulnerabilidades de seguridad. Elaboré diagramas de infraestructura y mantuve documentación técnica para mejorar la organización, la resolución de problemas y la eficiencia del mantenimiento.",
         "monthStart" : "Marzo",
         "monthFinished" : "Junio"
     },

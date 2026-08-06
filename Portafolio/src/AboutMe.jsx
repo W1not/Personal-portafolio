@@ -34,8 +34,6 @@ function AboutMe() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <BioCard label={t('careerLabel')}>
             <p>{t('description')}</p>
-            <br />
-            <p>{t('description2')}</p>
           </BioCard>
 
           <BioCard label={t('hobbiesLabel')}>
