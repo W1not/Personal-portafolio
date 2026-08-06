@@ -1,10 +1,9 @@
 {
     "title": "About me",
-    "carrerTitle" : "Carrer",
-    "description": "Experience developing applications in various programming languages, database administration using Microsoft SQL Server and MySQL, and knowledge of cloud platforms such as AWS, Azure, and Google Cloud. Currently, I have over one year of experience in creating solutions and managing the development process of an ERP system.",
-    "description2": "I enjoy developing solutions that help automate processes and support the personal growth of individuals, as well as systems that improve daily operations.",
+    "careerLabel" : "Career",
+    "description": "Full Stack Developer with experience building web applications using React, TypeScript, Node.js, and SQL databases. AWS Certified Cloud Practitioner with hands-on experience developing and maintaining ERP systems, modernizing websites, and delivering production-ready solutions. Passionate about creating software that automates processes, improves user experience, and solves real-world problems.",
     "skills": "Skills",
 
-    "Hobbietitle": "Hobbies",
+    "hobbiesLabel": "Hobbies",
     "hobbiesDescription": "I enjoy creating in various areas, both in my professional work and in my personal hobbies, such as drawing using traditional and digital techniques. I also enjoy developing and modifying interactive 3D characters in Unity and exploring new tools and programming languages."
 }

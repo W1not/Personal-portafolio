@@ -36,8 +36,8 @@ function ContactForm() {
   return (
     <motion.form
       onSubmit={handleSubmit}
-      className="w-full max-w-md mx-auto flex flex-col gap-5
-                 border border-[#0a3a5a] rounded-xl p-8
+      className="w-full max-w-md mx-auto md:max-w-lg flex flex-col gap-5
+                 border border-[#0a3a5a] rounded-xl p-12
                  bg-[#084569]/18"
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
